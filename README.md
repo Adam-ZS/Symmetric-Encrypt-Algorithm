@@ -32,3 +32,17 @@ Python Code: Fully functional Python implementation of the ADCRYPHAD algorithm.
 Manual Tracing: Step-by-step demonstration of encryption and decryption using sample data.
 
 Flexibility: Can be easily adapted for different block sizes and key lengths.
+
+# Installation
+
+    Clone the repository:
+
+git clone https://github.com/your-username/ADCRYPHAD.git
+
+Navigate into the project folder:
+
+    cd ADCRYPHAD
+
+Run the test.py script to check the encryption and decryption functionality
+
+    python test.py
