@@ -197,7 +197,7 @@ Flexibility: Can be easily adapted for different block sizes and key lengths.
     The final decrypted blocks will match the original plaintext, and the result of this decryption process will be the same as the initial input plaintext 
         
 # Installation
-
+Ensure you have Python 3.6 or higher installed
 Clone the repository
 
     git clone https://github.com/Adam-ZS/Symmetric-Encrypt-Algorithm.git
@@ -205,9 +205,11 @@ Clone the repository
 Navigate into the project folder
 
     cd Symmetric-Encrypt-Algorithm
-Install Enviroment (if not working)
+
+*Create a virtual environment to manage dependencies*
 
     python -m venv env
+
     source env/bin/activate
 
 
