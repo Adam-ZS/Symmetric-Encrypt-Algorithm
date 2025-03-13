@@ -144,7 +144,7 @@ def main():
 
     plaintext = input("Enter plaintext string: ") 
 
-    key = int(input("Enter a 16-bit key, 16) 
+    key = int(input("Enter a 16-bit key", 16) 
 
     plaintext_blocks = string_to_hex_blocks(plaintext) 
 
