@@ -352,6 +352,11 @@ Clone the repository
 Navigate into the project folder
 
     cd Symmetric-Encrypt-Algorithm
+Install Enviroment (if not working)
+
+    python -m venv env
+    source env/bin/activate
+
 
 Run the Encrypt.py script to check the encryption and decryption functionality
 
