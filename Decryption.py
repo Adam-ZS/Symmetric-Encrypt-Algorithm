@@ -5,7 +5,8 @@ def generate_inverse_sboxes(sboxes):
         for i in range(16): 
             inverse_sbox[sbox[i]] = i 
         inverse_sboxes.append(inverse_sbox) 
-    return inverse_sboxes
+    return inverse_sboxes 
+
 
 # Define the same S-boxes used during encryption
 S_BOXES = [
@@ -36,12 +37,12 @@ def substitute_block(block, sbox):
     left = (block >> 12) & 0xF 
     mid_left = (block >> 8) & 0xF 
     mid_right = (block >> 4) & 0xF 
-    right = block & 0xF
+    right = block & 0xF 
 
     left = sbox[left] 
     mid_left = sbox[mid_left] 
     mid_right = sbox[mid_right] 
-    right = sbox[right] 
+    right = sbox[right]
 
     return (left << 12) | (mid_left << 8) | (mid_right << 4) | right
 
@@ -71,7 +72,7 @@ def hex_blocks_to_string(blocks):
 
 def main(): 
     ciphertext = input("Enter ciphertext blocks : ") 
-    key = int(input("Enter the 16-bit key", 16)) 
+    key = int(input("Enter the 16-bit key: "), 16)  # Fixed line
 
     ciphertext_blocks = [int(block, 16) for block in ciphertext.split()] 
     decrypted_blocks = [decrypt(block, key) for block in ciphertext_blocks] 
