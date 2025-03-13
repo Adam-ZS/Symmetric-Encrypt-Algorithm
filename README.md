@@ -347,7 +347,7 @@ Flexibility: Can be easily adapted for different block sizes and key lengths.
 
 Clone the repository
 
-    git clone https://github.com/your-username/ADCRYPHAD.git
+    git clone https://github.com/Adam-ZS/Symmetric-Encrypt-Algorithm.git
 
 Navigate into the project folder
 
