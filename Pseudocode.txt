@@ -1,0 +1,147 @@
+# Pseudo-Code for the Proposed Algorithm
+
+    1. Initialize S-Boxes and Permutation Patterns 
+    
+       - S-Boxes ( 10 unique 16-element substitution boxes) 
+    
+       - Permutation (Define 16-bit permutation pattern) 
+    
+       - Generate Inverse S-Boxes for decryption. 
+    
+       - Generate Inverse Permutation pattern. 
+    
+     
+    
+    2. Function: Generate Subkeys 
+    
+       INPUT: 16-bit Master Key 
+    
+       OUTPUT: 4 Subkeys 
+    
+       FOR i = 0 to 3: 
+    
+           Rotate the key left by i bits. 
+    
+           Store the result as a subkey. 
+    
+      
+    
+    3. Function: Substitute Block 
+    
+       INPUT: 16-bit Block, S-Box 
+    
+       OUTPUT: Substituted 16-bit Block 
+    
+       a. Split the block into 4 nibbles (4 bits each). 
+    
+       b. Replace each nibble using the S-Box. 
+    
+       c. Recombine substituted nibbles into a 16-bit block. 
+    
+      
+    
+    4. Function: Permute Block 
+    
+       INPUT: 16-bit Block, Permutation Pattern 
+    
+       OUTPUT: Permuted 16-bit Block 
+    
+       a. Rearrange the bits of the block based on the pattern. 
+    
+      
+    
+    5. Function: Encrypt Block 
+    
+       INPUT: 16-bit Plaintext Block, Subkeys 
+    
+       OUTPUT: Ciphertext Block 
+    
+       a. FOR round = 0 to 3: 
+    
+           i. Apply S-Box substitution. 
+    
+           ii. Apply bit permutation. 
+    
+           iii. XOR the block with the current subkey. 
+    
+       b. Return the resulting ciphertext block. 
+    
+      
+    
+    6. Function: Decrypt Block 
+    
+       INPUT: 16-bit Ciphertext Block, Subkeys 
+    
+       OUTPUT: Plaintext Block 
+    
+       a. FOR round = 3 to 0 (in reverse): 
+    
+           i. XOR the block with the current subkey. 
+    
+           ii. Apply inverse permutation. 
+    
+           iii. Apply inverse S-Box substitution. 
+    
+       b. Return the resulting plaintext block. 
+    
+     
+    
+    7. Function: Convert String to Hex Blocks 
+    
+       INPUT: Plaintext String 
+    
+       OUTPUT: List of 16-bit Hexadecimal Blocks 
+    
+       a. Convert each character to its hexadecimal representation. 
+    
+       b. Group the hex values into 16-bit blocks. 
+    
+       c. Pad the final block if necessary. 
+    
+     
+    
+    8. Function: Convert Hex Blocks to String 
+    
+       INPUT: List of Decrypted Hexadecimal Blocks 
+    
+       OUTPUT: Plaintext String 
+    
+       a. Convert each block into characters. 
+    
+       b. Remove any padding. 
+    
+      
+    
+    9. Main Encryption Process 
+    
+       INPUT: Plaintext String, 16-bit Key 
+    
+       OUTPUT: Ciphertext Blocks 
+    
+       a. Generate subkeys using the master key. 
+    
+       b. Convert plaintext to hex blocks. 
+    
+       c. Encrypt each block using the `Encrypt Block` function. 
+    
+       d. Return the list of ciphertext blocks. 
+    
+      
+    
+    10. Main Decryption Process 
+    
+        INPUT: Ciphertext Blocks, 16-bit Key 
+    
+        OUTPUT: Plaintext String 
+    
+        a. Generate subkeys using the master key. 
+    
+        b. Decrypt each block using the `Decrypt Block` function. 
+    
+        c. Convert decrypted blocks to a plaintext string. 
+    
+        d. Return the plaintext string. 
+    
+      
+    
+    11. End. 
