@@ -345,14 +345,25 @@ Flexibility: Can be easily adapted for different block sizes and key lengths.
         
 # Installation
 
-    Clone the repository:
+Clone the repository
 
-git clone https://github.com/your-username/ADCRYPHAD.git
+    git clone https://github.com/your-username/ADCRYPHAD.git
 
-Navigate into the project folder:
+Navigate into the project folder
 
-    cd ADCRYPHAD
+    cd Symmetric-Encrypt-Algorithm
 
-Run the test.py script to check the encryption and decryption functionality
+Run the Encrypt.py script to check the encryption and decryption functionality
 
-    python test.py
+    python Encrypt.py
+
+![image](https://github.com/user-attachments/assets/2a6d83be-e126-4208-8e2f-5c837de876eb)
+
+To Decrypt
+Run
+
+    python Decryption.py
+ ![image](https://github.com/user-attachments/assets/bb69a58b-7d24-435e-9fe1-6a9cfcab3b5e)
+
+ 
+
